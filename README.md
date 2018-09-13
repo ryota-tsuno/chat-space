@@ -18,22 +18,20 @@
 
 |Column|Type|options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
 |name|string|null: false, foreign_key: true|
-|email|string|null: false|
-|pasword|string|null: false|
+|email|string|null: false, unique: true|
+|pasword|string|null: false, unique: true|
 
 ### Association
 - belongs_to :group
 - has_many :chats
 
-## chatテーブル
+## groupテーブル
 
 |Column|Type|options|
 |------|----|-------|
-|caht_id|integer|null: false, foreign_key: true|
 |text|text|null: false|
-|image|text|
+|image|string|
 
 ### Association
 - belongs_to :user
