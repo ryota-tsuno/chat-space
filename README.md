@@ -3,7 +3,8 @@
 ## Name
 - Chatspace
 
-## membersテーブル
+<!-- 中間テーブル -->
+## group_userテーブル
 
 |Column|Type|options|
 |------|----|-------|
@@ -14,19 +15,31 @@
 - belongs_to :group
 - belongs_to :user
 
+## groupsテーブル
+
+|Column|Type|options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :chats
+- has_many :users, through: :group_users
+- has_many :group_user
+
 ## usersテーブル
 
 |Column|Type|options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 |pasword|string|null: false, unique: true|
 
 ### Association
-- belongs_to :group
+- has_many :groups, through: :group_users
+- has_many :group_users
 - has_many :chats
 
-## groupテーブル
+## chatsテーブル
 
 |Column|Type|options|
 |------|----|-------|
@@ -35,3 +48,4 @@
 
 ### Association
 - belongs_to :user
+- belongs_to :group
