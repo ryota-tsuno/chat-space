@@ -63,10 +63,10 @@
                     %p.lower-message__content
                         牡蠣美味しい！！
         %form#new_message.js-form
-            %input#message_content.form_message.js-content{:placeholder => "type a message"}
+            %input#message_content.form_message.js-content{placeholder: "type a message"}
             .form_mask
                 %label.form_mask__image
-                    %span.filelabel{:title => "ファイルを選択"}
+                    %span.filelabel{title: "ファイルを選択"}
                         = fa_icon ("image"), class: "picture"
-                    %input#message_image.hidden.js-file{:type => "file"}
-            %input.form_submit{:type => "submit", :value => "Send"}
+                    %input#message_image.hidden.js-file{type: "file"}
+            %input.form_submit{type: "submit", value: "Send"}
