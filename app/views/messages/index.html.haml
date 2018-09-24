@@ -5,11 +5,11 @@
                 名前
             %h3.header__icon
                 .icon__edit
-                    %a{:href => "/groups/new"}
-                        %i.fa.fa-edit.edit_icon.fa-fw
-                .icon__new
-                    %a{:href => "/users/9292/edit"}
-                        %i.fa.fa-cog.setting.fa-fw
+                    = link_to new_group_path do
+                        = fa_icon ("edit"), class: "edit_icon"
+                .icon__setting
+                    = link_to edit_user_path(current_user.id) do
+                        = fa_icon ("cog"), class: "setting"
         .groups
             .group
                 -# %a{:href => "/group/21782/message"}
@@ -67,6 +67,6 @@
             .form_mask
                 %label.form_mask__image
                     %span.filelabel{:title => "ファイルを選択"}
-                        %i.fa.fa-picture-o.icon.picture
+                        = fa_icon ("image"), class: "picture"
                     %input#message_image.hidden.js-file{:type => "file"}
             %input.form_submit{:type => "submit", :value => "Send"}
