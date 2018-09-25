@@ -1,0 +1,30 @@
+.sideber
+    .header
+        %h3.header__name 
+            = current_user.name
+        %h3.header__icon
+            .icon__edit
+                = link_to new_group_path do
+                    = fa_icon ("edit"), class: "edit_icon"
+            .icon__setting
+                = link_to edit_user_path(current_user.id) do
+                    = fa_icon ("cog"), class: "setting"
+    .groups
+        .group
+            -# %a{:href => "/group/21782/message"}
+            .group__name
+                高知
+            .group__message
+                ヤッホー
+        .group
+            -# %a{:href => "/group/21782/message"}
+            .group__name
+                高知
+            .group__message
+                ヤッホー
+        .group
+            -# %a{:href => "/group/21782/message"}
+            .group__name
+                高知
+            .group__message
+                ヤッホー
