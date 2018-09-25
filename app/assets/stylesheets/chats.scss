@@ -14,7 +14,7 @@
           &__name {
             float: left;
             font-weight: bold;
-            color: $baseChatColor;
+            color: $white;
             font-size: 16px;
             text-align: justify;
             line-height: 100px;
@@ -29,12 +29,12 @@
             display: flex;
             .icon__edit {
               .edit_icon {
-                color: $baseChatColor;
+                color: $white;
               }
             }
             .icon__setting {
               .setting {
-                color: $baseChatColor;
+                color: $white;
               }
             }
           }
@@ -48,24 +48,24 @@
             padding-bottom: 40px;
               &__name {
                 font-size: 15px;
-                color: $baseChatColor;
+                color: $white;
                 padding-bottom: 5px;
               }
               &__message {
                 font-size: 11px;
-                color: $baseChatColor;
+                color: $white;
               }
           }           
       }
   }
   .chat {
     width: calc(100vw - 300px);
-    background: $baseChatColor;
+    background: $white;
     position: relative;
     
     .header {
       min-height: 100px;
-      background: $baseChatColor;
+      background: $white;
       border-bottom:#eeeeee thin solid;
       padding:0 40px 0 40px;
       
@@ -104,7 +104,7 @@
     }
     .messages {
       padding: 46px 40px 0 40px;
-      background: $baseChatColor;
+      background: $white;
       .message {
         padding-bottom: 40px;
         .upper-message {
@@ -143,12 +143,12 @@
         border: none; 
       }
       .form_mask {
-        background: $baseChatColor;
+        background: $white;
         height: 50px;
         padding-right: 10px;
         &__image {
           .filelabel {
-            background: $baseChatColor;
+            background: $white;
             .picture {
               font-size: 20px;
               line-height: 50px;
@@ -161,7 +161,7 @@
       }
       .form_submit {
         background: #38AEF0;
-        color: $baseChatColor;
+        color: $white;
         width: 100px;
         box-sizing: border-box;
         margin-left: 15px;
