@@ -1,0 +1,41 @@
+.chat
+    .header
+        .left-header
+            .left-header__title 
+                高知組
+            %ul.left-header__members 
+                構成員 : 
+                %li.member 
+                    高知太郎
+        .right-header
+            %a.right-header__button
+                .box1
+                    %p
+                        Edit
+    .messages
+        .message
+            .upper-message
+                .upper-message__user-name
+                    高知太郎
+                .upper-message__date
+                    2018.09.18
+            .lower-message
+                %p.lower-message__content
+                    牡蠣美味しい！！
+        .message
+            .upper-message
+                .upper-message__user-name
+                    高知太郎
+                .upper-message__date
+                    2018.09.18
+            .lower-message
+                %p.lower-message__content
+                    牡蠣美味しい！！
+    %form#new_message.js-form
+        %input#message_content.form_message.js-content{placeholder: "type a message"}
+        .form_mask
+            %label.form_mask__image
+                %span.filelabel{title: "ファイルを選択"}
+                    = fa_icon ("image"), class: "picture"
+                %input#message_image.hidden.js-file{type: "file"}
+        %input.form_submit{type: "submit", value: "Send"}

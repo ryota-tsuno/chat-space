@@ -1,6 +1,11 @@
 @import "./reset";
-@import "config/colors";
+@import "./config/colors";
 @import "font-awesome";
-@import "chats";
-@import "modules/user";
-@import "modules/flash";
+@import "./modules/user";
+@import "./modules/flash";
+@import "./modules/group";
+@import "./modules/side_bar";
+@import "./config/mixin/mixin";
+@import "./modules/chat";
+@import "./chats";
+@import "./config/mixin/vender_prefix";
