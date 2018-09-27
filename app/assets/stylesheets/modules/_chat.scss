@@ -29,16 +29,14 @@
     }
     .right-header {
       float: right;
-
-      .box1 {
-        box-sizing: border-box;
-        margin-top: 28px;
-        font-weight: bold;
-        border: solid 1px #00BFFF	;
-        p {
-          padding: 8px 20px;
-          color: #00BFFF	;
-        }
+      box-sizing: border-box;
+      margin-top: 28px;
+      font-weight: bold;
+      border: solid 1px #00BFFF	;
+      padding: 8px 20px;
+      .edit {
+        color: #00BFFF;
+        text-decoration: none;
       }
     }
   }
@@ -69,14 +67,14 @@
       }
     }
   }
-  #new_message.js-form {
+  #new_message {
     position: fixed;
     bottom: 0;
     width: calc(100vw - 300px);
     padding: 20px 40px;
     background: #D3D3D3;
     display: flex;
-    #message_content.form_message.js-content {
+    .form_message {
       height: 50px;
       padding: 0 10px;
       width: 900px;
@@ -87,19 +85,14 @@
       height: 50px;
       padding-right: 10px;
       &__image {
-        .filelabel {
-          background: $white;
-          .picture {
-            font-size: 20px;
-            line-height: 50px;
-          }
-        }
-        #message_image {
+        font-size: 25px;
+        line-height: 50px;
+      }
+      .hidden {
           display: none;
-        }
       }
     }
-    .form_submit {
+    .form__submit {
       background: #38AEF0;
       color: $white;
       width: 100px;

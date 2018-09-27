@@ -2,40 +2,19 @@
     .header
         .left-header
             .left-header__title 
-                高知組
+                = @group.name
             %ul.left-header__members 
-                構成員 : 
+                Member : 
                 %li.member 
-                    高知太郎
+                    - @group.users.each do |user|
+                        = "#{user.name}"
         .right-header
-            %a.right-header__button
-                .box1
-                    %p
-                        Edit
-    .messages
-        .message
-            .upper-message
-                .upper-message__user-name
-                    高知太郎
-                .upper-message__date
-                    2018.09.18
-            .lower-message
-                %p.lower-message__content
-                    牡蠣美味しい！！
-        .message
-            .upper-message
-                .upper-message__user-name
-                    高知太郎
-                .upper-message__date
-                    2018.09.18
-            .lower-message
-                %p.lower-message__content
-                    牡蠣美味しい！！
-    %form#new_message.js-form
-        %input#message_content.form_message.js-content{placeholder: "type a message"}
-        .form_mask
-            %label.form_mask__image
+            = link_to "Edit", edit_group_path(@group), class: "edit"
+    .new_message
+        = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'form_message', placeholder: 'type a message'
+            .form_mask
                 %span.filelabel{title: "ファイルを選択"}
-                    = fa_icon ("image"), class: "picture"
-                %input#message_image.hidden.js-file{type: "file"}
-        %input.form_submit{type: "submit", value: "Send"}
+                    = f.label :image, fa_icon("image"), class: 'form_mask__image'
+                    = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form__submit'
