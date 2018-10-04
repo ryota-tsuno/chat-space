@@ -1,4 +1,5 @@
 .wrapper {
-    @include flexbox;
+    display: flex;
+    display: -webkit-flex;
 }
   

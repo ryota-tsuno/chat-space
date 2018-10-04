@@ -10,6 +10,9 @@
                         = "#{user.name}"
         .right-header
             = link_to "Edit", edit_group_path(@group), class: "edit"
+    .chat_messages
+        = render @messages
+
     .new_message
         = form_for [@group, @message] do |f|
             = f.text_field :content, class: 'form_message', placeholder: 'type a message'
