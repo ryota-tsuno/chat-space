@@ -1,0 +1,1 @@
+json.arry! @users, :id, :name
