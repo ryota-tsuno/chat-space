@@ -65,8 +65,5 @@ $(function() {
     $('.chat-group-form').on("click", ".user-search-remove", function() {
         var user = $(this).parent();
         $(user).remove();
-
-        // $(this).remove('#chat-group-user-8');
-        console.log(user);
     })
 });
