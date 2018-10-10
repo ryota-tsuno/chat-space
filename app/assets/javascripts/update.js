@@ -1,6 +1,5 @@
 $(function() {
-    var $messages_list = $(".chat_messages");
-
+    
     function appendMessage(message){
         var html = ` <div class='message'  data-id = "${message.id}">
                             <div class='upper-message'>
