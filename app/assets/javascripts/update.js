@@ -1,5 +1,5 @@
 $(function() {
-    var messages_list = $(".chat_messages");
+    var $messages_list = $(".chat_messages");
 
     function appendMessage(message){
         var html = ` <div class='message'  data-id = "${message.id}">
@@ -15,13 +15,7 @@ $(function() {
                             ${message.content}
                         </div>
                    `
-        console.log(message.image)
-        if (message.image == null ) {
-            html = $(html).append(`</div>`)
-        }
-        else {
-            html = $(html).append(`<div class="lower-message__image"><img src = "${message.image}"'></div></div>`)
-        }
+        message.image == null ? html = $(html).append(`</div>`) : html = $(html).append(`<div class="lower-message__image"><img src = "${message.image}"'></div></div>`)
         return html
     }
 
@@ -36,7 +30,6 @@ $(function() {
             .done(function(messages) {
                 var newMessage_id = $(".chat_messages").find('.message:last').attr('data-id');
                 var insertHTML = '';
-                console.log(newMessage_id)
                 messages.forEach(function(message) {
                     if (message.id > newMessage_id) {
                          insertHTML = appendMessage(message);
