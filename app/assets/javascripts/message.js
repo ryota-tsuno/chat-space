@@ -1,7 +1,6 @@
 $(function() {
     function buildHTML(message) {
-        var html = `<div class="messages">
-                        <div class='message'>
+        var html = `<div class='message' data-id = "${message.id}">
                             <div class='upper-message'>
                                 <div class='upper-message__user-name'>
                                     ${message.user_name}
