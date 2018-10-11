@@ -16,7 +16,7 @@ $(function() {
         search_list.append(html);
     }
 
-    var member_list = $("#chat-group-member");
+    var member_list = $(".chat-group-form__field--right__member");
 
     function buildHTML(userName, userId) {
         var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
