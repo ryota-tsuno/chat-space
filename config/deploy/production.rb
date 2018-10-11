@@ -1,5 +1,4 @@
-server '52.68.83.117', user: 'ec2-user', roles: %w{app db web}
-# server-based syntax
+server '52.68.83.117', user: 'ec2-user', roles: %w{app db web}# server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
@@ -15,8 +14,7 @@ server '52.68.83.117', user: 'ec2-user', roles: %w{app db web}
 
 # Defines a role with one or multiple servers. The primary server in each
 # group is considered to be the first unless any hosts have the primary
-# proper
-ty set. Specify the username and a domain or IP for the server.
+# property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
 # role :app, %w{deploy@example.com}, my_property: :my_value
