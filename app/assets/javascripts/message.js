@@ -11,8 +11,7 @@ $(function() {
                             </div>
                             <div class='lower-message__content'>
                                 ${message.content}
-                            </div>
-                        </div>`
+                            </div>`
                         
         if (message.image == null ) {
             html = $(html).append(`</div>`)
