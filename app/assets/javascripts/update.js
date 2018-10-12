@@ -12,9 +12,14 @@ $(function() {
                             </div>
                         <div class='lower-message__content'>
                             ${message.content}
-                        </div>
-                   `
-        message.image == null ? html = $(html).append(`</div>`) : html = $(html).append(`<div class="lower-message__image"><img src = "${message.image}"'></div></div>`)
+                        </div>`
+
+        if (message.image == null ) {
+            html = $(html).append(`</div>`)
+        }
+        else {
+            html = $(html).append(`<div class="lower-message__image"><img src = "${message.image}"'></div></div>`)
+        }
         return html
     }
 
