@@ -27,7 +27,7 @@ $(function() {
 
         if (window.location.href.match(/\/groups\/\d+\/messages/)) {
             $.ajax({
-                url: location.href.json,
+                url: location.href,
                 type: "GET",
                 dataType: 'json',
             })
