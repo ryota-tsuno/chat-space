@@ -14,12 +14,12 @@ $(function() {
                             ${message.content}
                         </div>`
 
-        if (message.image == null ) {
-            html = $(html).append(`</div>`)
-        }
-        else {
-            html = $(html).append(`<div class="lower-message__image"><img src = "${message.image}"'></div></div>`)
-        }
+            if (message.image == null ) {
+                html = $(html).append(`</div>`)
+            }
+            else {
+                html = $(html).append(`<div class="lower-message__image"><img src = "${message.image}"'></div></div>`)
+            }
         return html
     }
 
@@ -49,5 +49,5 @@ $(function() {
         else {
             clearInterval(interval);
         } 
-    },5000)
+    },50000000)
 })
