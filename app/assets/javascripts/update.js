@@ -32,7 +32,8 @@ $(function() {
                 dataType: 'json',
             })
             .done(function(messages) {
-                var newMessage_id = $(".chat_messages").find('.message:last').attr('data-id');
+                var newMessage_id = $('.message:last').attr('data-id');
+                console.log(newMessage_id);
                 var insertHTML = '';
                 messages.forEach(function(message) {
                     if (message.id > newMessage_id) {
