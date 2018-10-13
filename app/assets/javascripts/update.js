@@ -49,5 +49,5 @@ $(function() {
         else {
             clearInterval(interval);
         } 
-    },50000000)
+    },5000)
 })
